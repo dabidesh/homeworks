@@ -4,7 +4,7 @@
 // @version      0.0.1
 // @description  Show position by age achievement!
 // @author       dabidesh
-// @match        https://5kmrun.bg/5kmrun/result/*
+// @match        https://app.5kmrun.bg/5kmrun/result/*
 // @icon         https://www.google.com/s2/favicons?domain=5kmrun.bg
 // @grant        none
 // ==/UserScript==
@@ -21,13 +21,13 @@
     let rows = table.rows;
 
     for (let i = 1; i < rows.length; i++) {
-      let cell = rows[i].cells[6];
+      let cell = rows[i].cells[5];
       if (cell) {
-        colAchievement.push(cell.querySelector('div').textContent);
+        colAchievement.push(cell.textContent);
       }
       let cellP = rows[i].cells[0];
       if (cellP) {
-        colPositions.push(cellP.querySelector('div').textContent);
+        colPositions.push(cellP.querySelector('span').textContent);
       }
     }
   }
@@ -58,7 +58,7 @@
     for (let i = 1; i < rows.length; i++) {
       let cellP = rows[i].cells[0];
       if (cellP) {
-        cellP.querySelector('div').textContent = colPositions[i - 1];
+        cellP.querySelector('span').textContent = colPositions[i - 1];
       }
     }
   }
