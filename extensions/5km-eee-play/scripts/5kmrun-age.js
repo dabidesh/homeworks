@@ -10,13 +10,13 @@
     let rows = table.rows;
 
     for (let i = 1; i < rows.length; i++) {
-      let cell = rows[i].cells[6];
+      let cell = rows[i].cells[5];
       if (cell) {
-        colAchievement.push(cell.querySelector('div').textContent);
+        colAchievement.push(cell.textContent);
       }
       let cellP = rows[i].cells[0];
       if (cellP) {
-        colPositions.push(cellP.querySelector('div').textContent);
+        colPositions.push(cellP.querySelector('span').textContent);
       }
     }
   }
@@ -47,7 +47,7 @@
     for (let i = 1; i < rows.length; i++) {
       let cellP = rows[i].cells[0];
       if (cellP) {
-        cellP.querySelector('div').textContent = colPositions[i - 1];
+        cellP.querySelector('span').textContent = colPositions[i - 1];
       }
     }
   }

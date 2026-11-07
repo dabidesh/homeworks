@@ -25,7 +25,7 @@
         "scripts/fix-img.js"
       ],
       "matches": [
-        "https://5kmrun.bg/5kmrun/result/*"
+        "https://app.5kmrun.bg/5kmrun/result/*"
       ]
     },
     {
