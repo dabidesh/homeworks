@@ -25,6 +25,7 @@ function copyId(el) {
 }
 
 const showInputs = () => {
+  const input = document.querySelector('input');
   const style = window.getComputedStyle(input);
   const width = style.getPropertyValue('width');
   if (width == '1px') {
